@@ -1,0 +1,56 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  New template code for TAMU Theses and Dissertations starting Fall 2012.  
+%%  For more info about this template or the 
+%%  TAMU LaTeX User's Group, see http://www.howdy.me/.
+%%
+%%  Author: Wendy Lynn Turner 
+%%	 Version 1.0 
+%%  Last updated 8/5/2012
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                           SECTION VI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%
+%\chapter{\uppercase{Conclusions and Future Work}}
+%
+%\section{Conclusions}
+%
+%The focus of this thesis has been the development of an efficient algorithm to apply the CCT to identify the conditional focal elements of  FH conditionals and compute their masses, beliefs and store the data required for their graphical representation all in one framework. The binary representation was used. It has been shown that the CCT in most real application will provide computational savings. The criterion for computational savings have also been derived. The structure of the proposed algorithm is such that a lot of optimizations to further reduce computational overhead can be made. This framework will be able to handle conflicting evidence, a problem the traditional combination operator (DRC) cannot circumvent.
+%The proposed approach carries a lot of potential to an analyst who may want to determine sensitivity of a knowledge base to incoming evidence, and understand the intuition behind the generation of conditional focal elements.
+%
+%
+%\section{Future Work}
+%
+%Further work  will be the validation of this algorithm using real data. Although after the data has been preprocessed, both synthetic and real data will typically have the same format, this is still necessary for validation.
+%
+%
+%%Due to the time constraint, some further work was envisaged but could not be carried out. Firstly the simulations were done using synthetic data, one aspect of the further work is to apply real data for validation. Also, considering that soft evidence will have various degrees of reliability, in further work uncertainty modeling framework should be able to account for this.
+%
+%Another is to optimize the efficiency of this algorithm, by applying more appropriate data structures which will help perform computations with the least amount of  computational resources. In this thesis, only the binary representation was used throughout. This representation is only optimal for looking up a mass function $m(A)$ for a given $A$. Operations  like marginalization, listing of focal sets and conditioning however will take exponential time in $\vert \Theta \vert$. This is unavoidable when $\vert \mathfrak{F} \vert$ is close to $2^{\vert \Theta \vert}$ even though in real problems this is seldom the case. The n-dimensional array therefore does not take advantage of the sparseness of data in these situations.
+%
+%The ordered list representation on the other hand although is more complicated in value look-up than the n-array representation, permits ``random access'' such that one can access any pair of hypothesis (and mass) without having to visit earlier pairs. This operation (random access) will take log$\vert \mathfrak{F} \vert$ for a single value, log$\vert \mathfrak{F} \vert$ + log$\vert \Theta \vert$ to retrieve a single subset of $A$ and time proportional to $\vert \Theta \vert$ to retrieve all subsets of $A$ (as $log_2 \vert \mathfrak{F} \vert \leq \vert \Theta \vert$).
+%
+%The binary tree representation, due to its inherent structure will require storage proportional to $\vert \Theta \vert \vert \mathfrak{F} \vert$ and time proportional to $\vert \Theta \vert \vert \mathfrak{F} \vert (log\vert \Theta \vert + log \vert \mathfrak \vert )$ to construct. Although operations like normalizing and  listing and will take slightly longer (by a constant factor) than the ordered list representation, the computation of $m(A)$, and $bel(A)$ (for $A \subseteq \Theta$) will take time proportional to $\vert \Theta \vert$~\cite{implementingbelief}.
+%There are also logical representations like the ordinary binary decision diagrams (OBDD). Although one can derive algorithms for all primitive operations (intersection, equality testing, projection, extension) in polynomial time using OBDDs, they have not been applied within DST framework yet. Further work will therefore be to employ the use of such appropriate data structures for further optimization of the proposed algorithm.
+%
+%
+%Thirdly, probabilistic graphical models (PLM) e.g. Bayesian networks, Conditional Random Fields etc., offer significant computational advantages using efficient message-passing approaches as they have within the Bayesian framework. Since the algorithm already stores the data required for graphical representation of conditional focal elements, the application of probabilistic graphical models for efficient computation of masses and belief simultaneously by exploiting the relationship between the conditional focal elements, and ordering the calculations appropriately is an intuitive approach because conditional masses and inferences can be computed simultaneously. The introduction of PLMs will be very beneficial especially when considering appropriate visualization and dealing with problem involving large sets of input data.
+%
+%Finally, as earlier mentioned, the proposed work was done assuming the soft data has been transformed into a usable format by a natural language processing (NLP) interface. In future work the entire pipeline; from raw data to NLP, to decision level fusion under the DST framework will be considered.
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\begin{figure}[H]
+%%\centering
+%%\includegraphics[scale=.50]{figures/Penguins.jpg}
+%%\caption{Another TAMU figure}
+%%\label{fig:tamu-fig4}
+%%\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%

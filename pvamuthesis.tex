@@ -1,0 +1,244 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%return
+%  New template code for TAMU Theses and Dissertations starting Fall 2012.  
+%  For more info about this template or the 
+%  TAMU LaTeX User's Group, see http://www.howdy.me/.
+%
+%  Author: Wendy Lynn Turner 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{report}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose,tmargin=1.25in,bmargin=1.25in,lmargin=1.4in,rmargin=1.15in}
+ \usepackage[doublespacing]{setspace}
+ \usepackage{tocloft}
+ \usepackage[rm, tiny,center, compact]{titlesec}
+ \usepackage{indentfirst}
+ \usepackage{etoolbox}
+\usepackage{tocvsec2}
+ \usepackage[titletoc]{appendix}
+ \usepackage{appendix}
+% \usepackage{tamuconfig}
+ \usepackage{pvamuconfig}
+\usepackage{rotating}
+
+
+\usepackage{lipsum}
+\usepackage{multirow}
+
+%\usepackage{fancyhdr}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+% Change the default page style to upper-righter page number
+\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+\patchcmd{\chapter}% <cmd>
+  {plain}% <search>
+  {myheadings}% <replace>
+  {}{}% <success><failure>
+
+\usepackage{algorithm}
+%\usepackage{algorithmic}
+\usepackage{algpseudocode}
+
+% Added to fix issues with pdf searching in some versions of LaTeX
+%\usepackage[T1]{fontenc}\usepackage{lmodern}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  showstringspaces=false,
+  commentstyle=\color{gray}\upshape
+}
+
+\lstdefinelanguage{XML}
+{
+  morestring=[b]",
+  morestring=[s]{>}{<},
+  morecomment=[s]{<?}{?>},
+  stringstyle=\color{black},
+  identifierstyle=\color{darkblue},
+  keywordstyle=\color{cyan},
+  morekeywords={xmlns,version,type}% list your attributes here
+}
+
+\usepackage{pbox}
+
+%\usepackage{caption}
+\usepackage[labelsep=period]{caption}
+\usepackage{subcaption}
+\usepackage{breakcites}
+\usepackage{url}
+\usepackage{tabularx}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\usepackage{textcomp}
+\usepackage{adjustbox}
+\usepackage{blindtext}
+
+\usepackage{amsfonts}
+
+%for formating
+\usepackage[document]{ragged2e}
+
+
+
+
+%\usepackage{pvamuconfig}
+%\usepackage{rotating}
+
+%\usepackage{fancyhdr}
+%\fancypagestyle{plain}{%
+%\renewcommand{\headrulewidth}{0pt}%
+%\fancyhf{}%
+%\rhead{\thepage}%
+%}
+
+
+\usepackage{amsthm}
+
+
+% Hyperref setup below.  You should be able to get away with using uncommenting just the first line.
+%\usepackage[hidelinks]{hyperref}
+
+% if \usepackage[hidelinks]{hyperref} doesn't work try this.
+% \usepackage{hyperref}  % Hidelinks is an option that removes link visiability.  TAMU Thesis Offices prefers to not see the links. But often doesn't work.  
+% 
+% \hypersetup{
+%     colorlinks=true,
+%     linkcolor=black,
+%     citecolor=black,
+%     filecolor=black,
+%     urlcolor=black,
+% }
+%%%%%%%  End of hyperref setup.  One of these two options should work, but my motto with hyperref is when in doubt, comment it out!
+%%%%%%%%%  This hopefully fixes the problem with vertical spacing of section headings at the top of the page..  Commented out in 1.0.7
+% \preto\section{%
+% \ifnum\value{section}>0\addtocontents{toc}{\vskip-6pt}\fi
+% }
+% \preto\subsection{%
+% \ifnum\value{subsection}=0\addtocontents{toc}{\vskip-6pt}\fi
+% \ifnum\value{subsection}>0\addtocontents{toc}{\vskip-6pt}\fi
+% } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+
+% Change to PVAMU format
+\ifx true false 
+\renewcommand{\tamumanuscripttitle}{Demand forecasting using Recurrent neural networks on Smart Meter data}
+\renewcommand{\tamupapertype}{Dissertation}
+\renewcommand{\tamufullname}{Ishan Khatri}
+\renewcommand{\tamudegree}{Master Degree}
+\renewcommand{\tamuchairone}{Dr. Lijun Qian}
+% Uncomment out the next line if you have co-chairs.  You will also need to edit the titlepage.tex file.
+%\newcommand{\tamuchairtwo}{Additional Chair Name}
+\renewcommand{\tamumemberone}{Dr. Lijun Qian}
+\newcommand{\tamumembertwo}{Dr. Lei Huang}
+\newcommand{\tamumemberthree}{Dr. Xiangfang Li}
+\renewcommand{\tamudepthead}{Dr. Pamela Obiomon}
+\renewcommand{\tamugradmonth}{Aug}
+\renewcommand{\tamugradyear}{2017}
+\renewcommand{\tamudepartment}{Department of Electrical and Computer Engineering}
+\fi
+
+\renewcommand{\pvamucollege}{PRAIRIE VIEW A\protect\&M UNIVERSITY\protect\\COLLEGE OF ENGINEERING\protect\\PRAIRIE VIEW, TEXAS}
+\renewcommand{\pvamumanuscripttitle}{Demand forecasting using convolutional neural networks on big real world data}
+\renewcommand{\pvamupapertype}{Thesis}
+\renewcommand{\pvamusubmitto}{Submitted to the Graduate School\\In Partial Fulfillment of the Requirements for\\The Degree of}
+\renewcommand{\pvamudegree}{MASTER OF SCIENCE}
+\renewcommand{\pvamumajor}{ELECTRICAL AND COMPUTER ENGINEERING}
+\renewcommand{\pvamufullname}{Ishan Khatri}
+\renewcommand{\pvamuadvisor}{Advisor Name}
+\renewcommand{\pvamudepthead}{Department Head}
+\renewcommand{\pvamucollegedean}{College Dean Name}
+\renewcommand{\pvamugraddean}{Graduate School Dean Name}
+\renewcommand{\pvamugradmonth}{Aug}
+\renewcommand{\pvamugradyear}{2017}
+
+
+%\include{titlepage} % This is simply a file that formats and adds your titlepage, please do not edit this unless you have a specific need. .
+\include{pvamutitle}
+\include{pvamusignature}
+\include{abstract}
+%\include{dedication}
+\include{acknowledgements}
+%\include{nomenclature}
+
+\include{lists}  % This is simply a file that formats and adds your toc, lof, and lot, please do not edit this unless you have a specific need. .
+
+
+%\newcommand{\qed}{\nobreak \ifvmode \relax \else
+%      \ifdim\lastskip<1.5em \hskip-\lastskip
+%      \hskip1.5em plus0em minus0.5em \fi \nobreak
+%      \vrule height0.75em width0.5em depth0.25em\fi}
+
+
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{theorem}{Theorem}
+
+%\newtheorem{corollary}{Corollary}[theorem]
+%\newtheorem{lemma}[theorem]{Lemma}
+
+\newtheorem{algo}{Algorithm}
+\newtheorem{alm}{Algorithm}
+
+
+%\pagestyle{fancy}
+%\lhead{This is my name}
+%%\rhead{this is page \thepage}
+%\cfoot{center of the footer!}
+%\renewcommand{\headrulewidth}{0.4pt}
+%\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+%\title{Title}
+%\author{Author}
+%
+%\begin{document}
+%
+%\maketitle
+%    \begin{abstract}
+%\thispagestyle{plain}
+
+%\include{nomenclature}
+\include{introduction}
+\include{related}
+\include{implement}
+\include{experiment}
+\include{analysis}
+\include{conclusion}
+
+%fix spacing in bibliography, if any...
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\let\oldbibitem\bibitem
+\renewcommand{\bibitem}{\setlength{\itemsep}{0pt}\oldbibitem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{bibliography}
+%\include{appendices}
+\include{vita}
+
+\end{document}
+
+

@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: pvamuthesis.aux
+A level-1 auxiliary file: pvamutitle.aux
+A level-1 auxiliary file: pvamusignature.aux
+A level-1 auxiliary file: abstract.aux
+A level-1 auxiliary file: acknowledgements.aux
+A level-1 auxiliary file: lists.aux
+A level-1 auxiliary file: introduction.aux
+A level-1 auxiliary file: related.aux
+A level-1 auxiliary file: implement.aux
+A level-1 auxiliary file: experiment.aux
+A level-1 auxiliary file: analysis.aux
+A level-1 auxiliary file: conclusion.aux
+A level-1 auxiliary file: bibliography.aux
+The style file: ieeetr.bst
+A level-1 auxiliary file: Vita.aux
+Database file #1: references.bib
+Warning--empty journal in wang2016forecasting
+Warning--empty journal in skupin20081
+Warning--can't use both volume and number fields in moura2011implementing
+Warning--empty institution in miller2010fleet
+Warning--empty journal in leurent2012modelling
+You've used 63 entries,
+            1876 wiz_defined-function locations,
+            829 strings with 13874 characters,
+and the built_in function-call counts, 15079 in all, are:
+= -- 1502
+> -- 544
+< -- 0
++ -- 209
+- -- 146
+* -- 1012
+:= -- 2118
+add.period$ -- 71
+call.type$ -- 63
+change.case$ -- 56
+chr.to.int$ -- 0
+cite$ -- 68
+duplicate$ -- 791
+empty$ -- 1518
+format.name$ -- 146
+if$ -- 3713
+int.to.chr$ -- 0
+int.to.str$ -- 63
+missing$ -- 63
+newline$ -- 202
+num.names$ -- 61
+pop$ -- 231
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 502
+stack$ -- 0
+substring$ -- 890
+swap$ -- 291
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 5
+while$ -- 153
+width$ -- 65
+write$ -- 595
+(There were 5 warnings)

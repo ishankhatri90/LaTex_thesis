@@ -1,0 +1,15 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Details of the Citi Bike Trip data \relax }}{26}
+\vskip -10pt
+\contentsline {table}{\numberline {3.2}{\ignorespaces Target dataset of the Citi Bike trip data\relax }}{27}
+\contentsline {table}{\numberline {3.3}{\ignorespaces Target weather dataset\relax }}{28}
+\contentsline {table}{\numberline {3.4}{\ignorespaces Target Holiday dataset\relax }}{28}
+\addvspace {10\p@ }
+\vskip -10pt
+\contentsline {table}{\numberline {4.1}{\ignorespaces Feature selection\relax }}{44}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Dataset counts\relax }}{50}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Comparison of results between proposed and baseline models (Female dataset)\relax }}{51}
+\contentsline {table}{\numberline {4.4}{\ignorespaces Comparison of results between proposed and baseline models (Male dataset)\relax }}{51}
+\addvspace {10\p@ }
